@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 @EnableDiscoveryClient
 @SpringBootApplication
 public class Sp10TurbineApplication {
-
+//ceshi
 	public static void main(String[] args) {
 		SpringApplication.run(Sp10TurbineApplication.class, args);
 	}
