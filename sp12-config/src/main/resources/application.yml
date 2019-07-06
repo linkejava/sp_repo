@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: config-server
+    
+    
+  profiles:
+    active: native
+#cloud是默认配置  
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+
+#        git:
+#          uri: https://github.com/你的用户路径/sp-config
+#          searchPaths: config    #仓库下的一个子目录，里面存放的是配置文件
+#          username: your-username
+#          password: your-password
+
+#        git:
+#          uri: https://github.com/https://github.com/linkejava/sp-repo
+#          searchPaths: sp-config
+#          username: your-username
+#          password: your-password
+         
+    
+  rabbitmq:
+    host: 192.168.65.160
+    port: 5672
+    username: admin
+    password: admin
+
+    
+server:
+  port: 6001
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
